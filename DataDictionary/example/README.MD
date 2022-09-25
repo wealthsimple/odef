@@ -3,13 +3,13 @@
 The goal of the example event is to guide you while you are building your own data dictionaries for many of your products. 
 
 ## Data Dictionary Folder Structure 
-
+```
 ├── DataDictionary
 │   └── example
 │       ├── README.MD
 │       └── events
 │           └── example_data_dict.yml
-
+```
 - Create new filder (like `example`) for each data source 
 - Create README.MD and populate with general description of the data source and most common fields 
 - In the `events` you can create a `yml` file which can be used by automation and for easy visualiztion and searches 
