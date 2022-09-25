@@ -1,0 +1,22 @@
+status: sunrise/midday/sunset
+name: Detection_Name
+query: Detection query
+baseline:
+- string which entails your baseline
+- Note, if multiple baselines
+- Add them one by one using hyphen
+visualization: Describe the fields that are being visualized as output of the query
+schedule: For example, ever 1h, or 1 week etc. 
+event_limit: 0
+data_source: The data source used. 
+data_location: The location of the data - cloud, on-prem, system name, bucket name etc.   
+tactic: tactic covered with the detection
+mitre_id: Mitre id, for example->T1563.001
+mitre_url: https://attack.mitre.org/techniques/T1098/001/
+detection_severity: Severity is a measurement of impact in case of true positive. 
+incident:
+  priority: numeric, 0-unknown, 0.5 - informational, 1-low,2-medium,3-high,4-critical
+  type: type of the incident/malware/hacking etc.
+  name: incident name - normally sourced from the detection name
+  description: 'The human readable description of the incident'
+  sla: if applicable
