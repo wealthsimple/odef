@@ -1,0 +1,13 @@
+title: Cloudtrail
+description: AWS CloudTrail Log format common schema
+platform: aws
+log_source: cloudtrail
+event_code: cloudtrail
+event_version: '1.05'
+event_fields:
+- standard_name: TBD
+  standard_type: TBD
+  name: eventTime
+  type: datetime
+  description: "The date and time request was made, in coordinated universal time(UTC)."
+  sample_value: '2020-03-17T06: 07: 08Z'
