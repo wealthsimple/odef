@@ -1,0 +1,19 @@
+IOC_List:
+  - actor: ''
+    reporter: 
+    sha1_hashes:
+      - 
+    sha256_hashes:
+      - 
+    md5_hashes:
+      - 
+    domains:
+      -  
+    ip_addresses: 
+      - 
+    incident:
+      severity: 4
+      type: ''
+      name: '' 
+      description: ''
+      sla: 1440
