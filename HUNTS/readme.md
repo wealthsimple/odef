@@ -15,6 +15,7 @@ High-level goals for the HUNTS library:
 
 ## Hunt creation process
 
+Standard as per the Sunrise phase:
 
 ```mermaid 
 flowchart 
