@@ -1,0 +1,11 @@
+hunting_id: 
+    source: "datasource" # example data source
+    index: "index or view" # index or view 
+    fields: ["list", "of","fields"] # fields that are used for the hunt/detection
+    enrich_field: ["domain"] # the idea of having enrich field is to identify opportunities for creating cache table
+    query: "the query itself" # the query itself 
+
+# Having a dependency tree will provide opportunities for: 
+# 1) Unifying hunts/detections into one
+# 2) Creating a dependency which will be communicated to engineering and prevent failures in case of future changes to the data
+# 3) Clearly understand the impact of data change 
