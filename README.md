@@ -262,7 +262,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
 <details><summary><h3>Sunrise phase Process Flow</h3></summary>
 
 ```mermaid 
-flowchart;
+graph TD;
 Research1(Opportunity Identification) -->Research2(Prioritize);
 Research2 -->Research3(Develop Research Questions);
 Research3 -->Research4(Information Gathering);
