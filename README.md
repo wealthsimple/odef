@@ -346,6 +346,23 @@ High level goals for the Midday phase:
 </tbody>
 </table>
 
+<details><summary><h3>Midday phase Process Flow</h3></summary>
+
+```mermaid 
+graph TD;
+Monitor1(Run per schedule) -->Monitor2(Receive alerts);
+Monitor2(Respond to alerts) --> Monitor3{False Positives?} ;
+Monitor3 --> |no| Measure[Document TP];
+Measure --> Review(Perform periodic review)
+Monitor3 --> |yes| Improve(Improve);
+Improve --> Monitor1;
+
+```
+
+</details>
+
+# 
+
 ### Phase 3️⃣ Sunset 🌆
 <p align="justify">
 During the “Sunset” phase the detection is taken out of commission. The phase wants to ensure that resources are not spent for outdated detections that are no longer applicable and at the same time leave sufficient trace of the existence of the detection. 
@@ -382,6 +399,16 @@ High level goals for the Sunset phase:
 </tbody>
 </table>                                                                           
 
+<details><summary><h3>Sunset phase Process Flow</h3></summary>
+
+```mermaid 
+graph TD;
+Review1[Review completed] --> Review2;
+Review2{detection ready to decom} -->|yes| Decommission(Decommission the detection);
+Decommission --> Preserve(Preserve knowledge);
+```
+
+</details>
 
 # Detection Engineering Maturity Model (DEMM)
 
