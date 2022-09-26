@@ -404,6 +404,7 @@ High level goals for the Sunset phase:
 ```mermaid 
 graph TD;
 Review1[Review completed] --> Review2;
+Review2{detection ready to decom} -->|no| End[end];
 Review2{detection ready to decom} -->|yes| Preserve(Preserve knowledge);
 Preserve --> Decommission(Decommission the detection);
 ```
