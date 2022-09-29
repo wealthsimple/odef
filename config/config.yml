@@ -1,0 +1,4 @@
+DetectionTemplates: ["alert_template.yml","alert_template.txt", "documentation_template.md"]
+HuntTemplates: []
+entry_question.choices: ["DETECTION","HUNT"]
+detection_author: ["atanas.viyachki@wealthsimple.com"]

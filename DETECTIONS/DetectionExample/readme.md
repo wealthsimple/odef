@@ -1,7 +1,7 @@
 # The ODEF Detection Template
 ## Detection Summary   
 
-| Status | Sunrise/Midday/Sunset (developing/active/decommissioned) |
+| Status | sunrise/midday/sunset (developing/active/decommissioned) |
 | ----------- | ----------- |
 | `Goal (Why)` | *Goal/s of the detection* |
 | `TTP (What)` | *List Mitre TTPs; Include threat actor if applicable*|

@@ -1,0 +1,7 @@
+Cerberus
+Jinja2
+MarkupSafe
+prompt-toolkit
+PyYAML
+questionary
+wcwidth
