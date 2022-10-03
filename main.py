@@ -8,7 +8,8 @@ from enum import Enum
 from jinja2 import Template
 
 from helpers.file_helper import FileHelper
-# from helpers.custom_questions.local_questionery import ContentQuestions
+from helpers.update_coverage import update_coverage
+from helpers.update_dep_tree import update_dep_tree
 from helpers.yml_helpers import YmlHelper
 from helpers.update_tests import TestWritter
 
@@ -38,7 +39,7 @@ def main(fac:ExporterFactory, conf:dict, ContentQuestioner) -> None:
 
     #collect data 
     data = data_collector.collector(ContentQuestioner)
-    
+
     #prepare data
     content_name = ContentName(data.get("detection_name"))
     content_name = content_name.convert_case()
@@ -76,9 +77,13 @@ def main(fac:ExporterFactory, conf:dict, ContentQuestioner) -> None:
     # ready = template_writter.modify_tests_file()
     # template_writter.write_modifieid(modified=ready,location=unittest_file_location)
     
-    # TODO update coverage 
 
-    # TODO update dependency tree 
+    # update coverage
+    update_coverage()
+
+    # update deptree
+    update_dep_tree()
+
 
 if __name__ == "__main__":
     # load config 
