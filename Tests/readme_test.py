@@ -7,7 +7,7 @@ class TestCaseBase(unittest.TestCase):
         if not pl.Path(path).resolve().is_file():
             raise AssertionError("File does not exist: %s" % str(path))
 
-class CheckForReadme(TestCaseBase):
+class CheckForDetectionReadme(TestCaseBase):
     def get_folders(self):
         everything = glob.glob("./DETECTIONS/*")
         folders = [i for i in everything if "md" not in i]
@@ -19,17 +19,16 @@ class CheckForReadme(TestCaseBase):
             path = pl.Path(path+"/readme.md")
             self.assertIsFile(path)
 
-# class CheckForTerragruntHCL(TestCaseBase):
-#     def get_folders(self):
-#         everything = glob.glob("./DETECTIONS/*")
-#         folders = [i for i in everything if "md" not in i]
-#         return folders
+class CheckForHuntReadme(TestCaseBase):
+    def get_folders(self):
+        everything = glob.glob("./HUNTS/*")
+        folders = [i for i in everything if "md" not in i]
+        return folders
     
-#     def test(self):
-#         paths = self.get_folders()
-#         for path in paths: 
-#             path = pl.Path(path+"/terragrunt.hcl")
-#             self.assertIsFile(path)
-           
+    def test(self):
+        paths = self.get_folders()
+        for path in paths: 
+            path = pl.Path(path+"/readme.md")
+            self.assertIsFile(path)
 if __name__ == '__main__':
     unittest.main()

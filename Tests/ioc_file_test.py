@@ -6,7 +6,7 @@ class IOCFileValidation(unittest.TestCase):
 
     def test(self):
         def load_doc():
-            with open('IOC/IOC_Library.yml', 'r') as stream:
+            with open('./IOCs/IOC_Library.yml', 'r') as stream:
                 try:
                     return yaml.safe_load(stream)
                 except yaml.YAMLError as exception:
