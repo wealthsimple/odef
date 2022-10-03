@@ -1,17 +1,16 @@
-xsoar_status: "Active/Inactive/Decommissioned"
-query: {{ detection_name }}
-schedule: 'the value for earliest. Example: -24h'
-baseline: 
-  - 'string which entails your baseline'
-  - 'Note, if multiple baselines'
-  - 'Add them one by one using hyphen'
-visualization: 'any visualization or stats. Example: |table eventTime, eventType, awsRegion, eventSource, sourceIPAddress, userIdentity.arn'
+status: "{{ status }}"
+name: "{{ detection_name }}"
+query: "{{ query }}"
+author: "{{ detection_author }}"
+schedule: "{{ schedule }}"
+baseline: "{{ baseline }}"
+visualization: "{{ visualization }}"
 event_limit: 0
-data_source: "The data source. For example AWS cloudtrail, SentinelOne...etc"  
-data_location: The location of the data - for example "splunk"
-tactic: Persistence
-mitre_id: T1563.001
-mitre_url: https://attack.mitre.org/techniques/T1098/001/
+data_source: "{{ data_source }}"
+data_location: splunk
+tactic: "{{ tactic }}"
+mitre_id: "{{ mitre_id }}"
+mitre_url: "{{ mitre_url }}"
 incident:
   severity: "numeric, 0-unknown, 0.5 - informational, 1-low,2-medium,3-high,4-critical"
   type: 'Security - Threat Hunting - Incident'

@@ -1,7 +1,7 @@
 # The ODEF Detection Template
 ## Detection Summary   
 
-| Status | Sunrise/Midday/Sunset (developing/active/decommissioned) |
+| Status | **{{ status }}** (developing/active/decommissioned) |
 | ----------- | ----------- |
 | `Goal (Why)` | *{{detection_goal}}* |
 | `TTP (What)` | *{{mitre_url}}*|
