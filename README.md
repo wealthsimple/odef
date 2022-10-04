@@ -11,7 +11,7 @@ This is a template repository, it can be forked and customized to the needs of t
 [Example Detection](DETECTIONS/DetectionExample/detection_example.yml)
 
 ## How to Install and Run the Project
-* Fork the repository
+* Use the template to create a new repository under your organization
 
 * Clone it locally to your development machine 
 
