@@ -7,13 +7,13 @@ baseline: "{{ baseline }}"
 visualization: "{{ visualization }}"
 event_limit: 0
 data_source: "{{ data_source }}"
-data_location: splunk
+data_location: splunk/elk/s3/datadog etc
 tactic: "{{ tactic }}"
 mitre_id: "{{ mitre_id }}"
 mitre_url: "{{ mitre_url }}"
 incident:
   severity: "numeric, 0-unknown, 0.5 - informational, 1-low,2-medium,3-high,4-critical"
-  type: 'Security - Threat Hunting - Incident'
-  name: 'string, name of the incident. example: Security - TH - Suspicious addition to Google Group' 
-  description: 'inc descr: This hunt is monitoring for changes in any of the Google groups that WS uses'
+  type: 'Security Incident'
+  name: 'string, name of the incident' 
+  description: 'inc descr: This detection is monitoring for changes in any of X'
   sla: 'integer - number of minutes added to incident create time(incident sla). example sla: 1440 this means 24h sla'
