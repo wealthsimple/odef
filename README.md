@@ -1,7 +1,7 @@
 # Open Detection Engineering Framework Repo 
 
 ## Purpose 
-This is a template repository, it can be forked and customized to the needs of the organization. The repository provides the framework concepts and the adaptation is normally tailored based on the needs. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content. 
+This is a template repository, it can be forked and customized to the needs of your organization. The repository provides the framework concepts and the adaptation is normally tailored based on the needs. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content. 
 
 ## Important links
 [Open Detection Engineering Framework](Docs/ODEF-README.md)\
