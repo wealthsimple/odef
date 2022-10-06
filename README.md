@@ -3,6 +3,11 @@
 ## Purpose 
 This is a template repository, it can be forked and customized to the needs of your organization. The repository provides the framework concepts and the adaptation is normally tailored based on the specific requirements. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content and enable and promote knowledge sharing. 
 
+## Goals
+1. The goals the repository are to become a central security content knowledge management base where the content is stored,organized,shared and interacted with.  
+2. The python application assists with the process of detection documentation and can be extended to run unittests quality checks and more. 
+3. The repository also hosts the open detection engineering framework which cna be used as a reference to tailor and craft internal processes accordingly.
+
 ## Important links
 
 [Start here -> Open Detection Engineering Framework](Docs/ODEF-README.md)\
