@@ -1,4 +1,7 @@
 # Open Detection Engineering Framework Repo 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/wealthsimple/odef?color=green)
+![GitHub Release Date](https://img.shields.io/github/release-date/wealthsimple/odef)
+![GitHub contributors](https://img.shields.io/github/contributors/wealthsimple/odef?color=teal)
 
 ## Purpose 
 This is a template repository, it can be forked and customized to the needs of your organization. The repository provides the framework concepts and the adaptation is normally tailored based on the specific requirements. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content and enable and promote knowledge sharing. 
