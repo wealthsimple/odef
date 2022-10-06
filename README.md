@@ -4,9 +4,9 @@
 This is a template repository, it can be forked and customized to the needs of your organization. The repository provides the framework concepts and the adaptation is normally tailored based on the specific requirements. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content and enable and promote knowledge sharing. 
 
 ## Goals
-1. The goals the repository are to become a central security content knowledge management base where the content is stored,organized,shared and interacted with.  
-2. The python application assists with the process of detection documentation and can be extended to run unittests quality checks and more. 
-3. The repository also hosts the open detection engineering framework which cna be used as a reference to tailor and craft internal processes accordingly.
+1. The goal the repository is to become a central security content knowledge management base where the content is stored,organized,shared and interacted with.  
+2. The goal of the python application is to assists with the process of detection documentation and can be extended to run unittests quality checks and more. 
+3. The repository also hosts the open detection engineering framework which can be used as a reference to tailor and craft internal processes accordingly.
 
 ## Important links
 
@@ -46,7 +46,15 @@ python main.py
 * Follow the process and once completed ensure that all files are present and your detection is well documented
 
 ## How to contribute
-TBD
+There are two ways to contribute to the repository and the community. Via discussions where you can raise topics of interest that will help the detection engineering community or by submitting issues or PRs to push your change to the repository. 
+
+### Discussions 
+Feel free to start discussions on topics that you believe can help and support the community. Please make sure to follow the rules
+**(No Spam / Advertising, Do not post “offensive” posts, links or images. Do not cross post questions. Remain respectful of other members at all times.)**
+and [**github code of conduct**](https://docs.github.com/en/site-policy/github-terms/github-community-code-of-conduct)
+
+### PRs & Issues 
+Feel free to submit an issue for any enhancements or bugs that you see, even better if you can submit a pull request with the fix or enhancement that you introduced. For issues/pr make sure to provide sufficient details and information about your change or request. 
 
 ## Project Folder Structure
 *There are several folders that are important in the project and will be explained below*
