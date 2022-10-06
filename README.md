@@ -4,7 +4,8 @@
 This is a template repository, it can be forked and customized to the needs of your organization. The repository provides the framework concepts and the adaptation is normally tailored based on the specific requirements. In some cases, there could be integration with ci/cd pipelines in other cases it can be used to only document and store security content and enable and promote knowledge sharing. 
 
 ## Important links
-[Open Detection Engineering Framework](Docs/ODEF-README.md)\
+
+[Start here -> Open Detection Engineering Framework](Docs/ODEF-README.md)\
 [ODEF Detection Template](templates/documentation_template.md)\
 [ODEF Detection YML](templates/alert_template.yml)\
 [ODEF Hunt YML](templates/hunt_template.yml)\
