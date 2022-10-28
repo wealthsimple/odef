@@ -1,5 +1,6 @@
 # The ODEF Detection Template
-## Detection Summary   
+
+## Detection Summary
 
 | Status | sunrise/midday/sunset (developing/active/decommissioned) |
 | ----------- | ----------- |
@@ -12,29 +13,24 @@
 | `Priority` | *high/medium/low*|
 
 <details><summary>Research</summary>
-<p align="justify">
 
-### Goal 
+<p align="justify"> 
+
+### Goal
 
 The goal section provides the intended purpose of the alert. It is a simple, plaintext description of the type of behavior you're attempting to detect and why.
-#
 
-### Categorization 
+### Categorization
 
 The categorization is a mapping of the detection to the relevant entry in the MITRE ATT&CK. This is used in reporting with tools such as Mitre Att&CK Navigator to visualize coverage of TTPs and provide assurance. Additionally when a TTP is mapped to MITRE it can be used to perform attacker cyber attributed.  
-#
 
 ### Detection Summary
 
 Is a high-level walkthrough of how the detection/hunt works. This describes what the alert is looking for, what technical data sources are used, any enrichment that occurs, and any false positive minimization steps.
-#
 
-### Technical Context
+### **Technical Context**
 
-Technical Context provides detailed information and background needed for a responder or an engineer to understand all components of the detection.The goal of the section is to include technical research for the TTP and additionally how it relates to the environment. It can help incident responders to understand better the alert and also security engineers in order to address a technical security gap. 
-#
-
-
+Technical Context provides detailed information and background needed for a responder or an engineer to understand all components of the detection.The goal of the section is to include technical research for the TTP and additionally how it relates to the environment. It can help incident responders to understand better the alert and also security engineers in order to address a technical security gap.
 
 </p>
 </details>
@@ -50,27 +46,24 @@ Identify the appropriate source of information which will be used in the detecti
 ### Visibility Check
 
 Ensure there is sufficient logging, retention and visibility. Provide evidence (screenshots, json files etc) that prove that there is sufficient visibility and logging to collect and build detection logic. 
-#
+
 </p>
 </details>
 
 <details><summary>Build & Enrich</summary>
 <p align="justify">
 
-### Detection Creation 
+### Detection Creation
 
 Create a detection query against the identified dataset. Document the queries used here and provide details of the logic. 
-#
 
 ### Manual Testing
 
 Perform manual testing against production data and ensure minimal False Positives. Document your test searches. 
-#
 
 ### Baseline development
 
 Based on the results from your *manual testing* you may or may not need to develop a baseline. Baseline is a set of normal behaviours which are excluded from the detection to minimize noise and increase fidelity 
-#
 
 ### Blind Spots and Assumptions
 
@@ -88,7 +81,7 @@ Create automated unittest that will cover:
 
 ### Enrich
 
-Utilize or develop enrichment capability to support the detection if needed. There are external and internal sources of enrichment. In your pipeline or SIEM you should be able to interact with these sources and collect data as needed. For example, consider user behavioral analytic use case which requires to know when a user is on vacation - this would require access to an up-to-date HR database. 
+Utilize or develop enrichment capability to support the detection if needed. There are external and internal sources of enrichment. In your pipeline or SIEM you should be able to interact with these sources and collect data as needed. For example, consider user behavioral analytic use case which requires to know when a user is on vacation - this would require access to an up-to-date HR database.
 #
 
 </p>

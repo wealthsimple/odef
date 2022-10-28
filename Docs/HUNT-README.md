@@ -1,23 +1,22 @@
-# The HUNT Library 
+# The HUNT Library
 
-Welcome to the Threat Hunting HUNTS library :wave: 
-#
+Welcome to the Threat Hunting HUNTS library :wave:
+
 ## Goals
 
-High-level goals for the HUNTS library: 
-<ol>
-  <li>Organize HUNTS in a structured format</li>
-  <li>Provide audit/log trail</li>
-  <li>Ensure continues vigilance for the covered TTPs</li>
-  <li>Automate manual searching and reduce the operational effort</li>
-  <li>Be the central repository of detections</li>
-</ol>
+High-level goals for the HUNTS library:
+
+1. Organize HUNTS in a structured format
+2. Provide audit/log trail
+3. Ensure continues vigilance for the covered TTPs
+4. Automate manual searching and reduce the operational effort
+5. Be the central repository of detections
 
 ## Hunt creation process
 
 Standard as per the Sunrise phase:
 
-```mermaid 
+```mermaid
 flowchart 
 Research1(Opportunity Identification) -->Research2(Prioritize)
 Research2 -->Research3(Develop Research Questions)
