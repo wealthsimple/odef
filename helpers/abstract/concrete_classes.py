@@ -180,5 +180,5 @@ class ContentType(Enum):
     HUNT =  HuntExporter() 
 
 class TemplateType(Enum):
-    DETECTION = ["alert_template.yml", "documentation_template.md"]
-    HUNT = ["hunt_template.yml","documentation_template.md"]
+    DETECTION = ["alert-template.yml", "documentation-template.md"]
+    HUNT = ["hunt-template.yml","documentation-template.md"]

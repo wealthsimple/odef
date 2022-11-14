@@ -28,5 +28,5 @@ class FileHelper:
 
 if __name__ == "__main__":
     tf = FileHelper()
-    temp = tf.load_template('alert_template.yml')
+    temp = tf.load_template('alert-template.yml')
     print(temp)

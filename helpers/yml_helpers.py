@@ -19,5 +19,5 @@ class YmlHelper:
             yaml.dump(obj, outfile, default_flow_style=False, sort_keys=False)
 
 if __name__ == "__main__":
-    path = pathlib.Path('DETECTIONS/DetectionExample/detection_example.yml')
+    path = pathlib.Path('DETECTIONS/DetectionExample/detection-example.yml')
     print(YmlHelper.readYmlFile(path))
