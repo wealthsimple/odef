@@ -16,10 +16,10 @@ This is a template repository, it can be forked and customized to the needs of y
 ## Important links
 
 [Start here -> Open Detection Engineering Framework](Docs/ODEF-README.md)\
-[ODEF Detection Template](templates/documentation_template.md)\
-[ODEF Detection YML](templates/alert_template.yml)\
-[ODEF Hunt YML](templates/hunt_template.yml)\
-[Example Detection](DETECTIONS/DetectionExample/detection_example.yml)
+[ODEF Detection Template](templates/documentation-template.md)\
+[ODEF Detection YML](templates/alert-template.yml)\
+[ODEF Hunt YML](templates/hunt-template.yml)\
+[Example Detection](DETECTIONS/DetectionExample/detection-example.yml)
 
 ## How to Install and Run the Project
 * Use the template to create a new repository under your organization
