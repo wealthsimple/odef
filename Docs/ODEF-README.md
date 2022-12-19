@@ -27,7 +27,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
 
 ### Phase 1️⃣ Sunrise 🌅
 
-<p align="justify">Sunrise is the first phase of the detection lifecycle. It marks the inception, development and deployment of the detection. During that phase there are 6 core functions that should be addressed: 
+<p align="justify">Sunrise is the first phase of the detection lifecycle. It marks the inception, development and deployment of the detection. During that phase there are 6 core functions that should be addressed:
 </p>
 
 <ul>
