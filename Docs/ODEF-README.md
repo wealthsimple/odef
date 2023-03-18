@@ -1,14 +1,17 @@
 # Open Detection Engineering Framework - ODEF
+
 ## Introduction
+
 <p align="justify">
-The Framework focuses on using business goals and outcomes to drive and guide cybersecurity activities to deliver detections, improve visibility, minimize vendor dependencies and ultimately improve the organization security posture. The Framework in its core provides the principles that guide efficient and effective detection engineering practices and also provides three maturity levels to measure the organization performance. 
-Each phase of the framework’s core aims to describe the detection lifecycle and uses phase functions to focus the effort of the detection engineer and guide them through the process. 
-The three maturity levels provide a high level mechanism for organizations to view and evaluate their approach for detection engineering and focus on areas of improvement. 
-The Framework enables organizations – regardless of size, degree of cybersecurity risk, or cybersecurity sophistication – to apply the principles and best practices of detection engineering and to improve their security posture. 
+The Framework focuses on using business goals and outcomes to drive and guide cybersecurity activities to deliver detections, improve visibility, minimize vendor dependencies and ultimately improve the organization security posture. The Framework in its core provides the principles that guide efficient and effective detection engineering practices and also provides three maturity levels to measure the organization performance.
+Each phase of the framework’s core aims to describe the detection lifecycle and uses phase functions to focus the effort of the detection engineer and guide them through the process.
+The three maturity levels provide a high level mechanism for organizations to view and evaluate their approach for detection engineering and focus on areas of improvement.
+The Framework enables organizations – regardless of size, degree of cybersecurity risk, or cybersecurity sophistication – to apply the principles and best practices of detection engineering and to improve their security posture.
 </p>
 
 ## High level goals
-The framework high level goals are to: 
+
+The framework high level goals are to:
 
 <ul>
   <li>Provide guidance on how to be systematic, repeatable and predictable when building hunts and detections</li>
@@ -20,9 +23,10 @@ The framework high level goals are to:
 </ul>
 
 ## Framework Core
+
 <p align="justify">
-The Framework Core provides a set of activities to achieve specific cybersecurity outcomes and references examples of how to achieve those outcomes. 
-The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases describe the life of a detection and the functions, guidelines and goals for each phase. Functions, goals, guidelines help the detection engineer to have north star focus and deliver a detection with exceptional quality. 
+The Framework Core provides a set of activities to achieve specific cybersecurity outcomes and references examples of how to achieve those outcomes.
+The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases describe the life of a detection and the functions, guidelines and goals for each phase. Functions, goals, guidelines help the detection engineer to have north star focus and deliver a detection with exceptional quality.
 </p>
 
 ### Phase 1️⃣ Sunrise 🌅
@@ -39,7 +43,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   <li>Share (Knowledge)</li>
 </ul>
 
-#### High level goals for the Sunrise phase: 
+#### High level goals for the Sunrise phase
 
 <ul>
   <li>Build high fidelity detection </li>
@@ -48,7 +52,6 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   <li>Integrate and automate in the environment </li>
   <li>Socialize the detection with the security organization</li>
 </ul>
-
 
 <table class="tg">
 <thead>
@@ -67,14 +70,15 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
     <td class="tg-0pky">
 
 - Document the use case that you’re building and set goals.
-- Is the TTP already covered by an existing alert or detection? 
-- Is there sufficient knowledge to start building or additional research would be required? 
+- Is the TTP already covered by an existing alert or detection?
+- Is there sufficient knowledge to start building or additional research would be required?
 - What are sources of information that will assist the research?
+
 </td>
   </tr>
   <tr>
     <td class="tg-0lax">Prioritize</td>
-    <td class="tg-0lax">Detection engineering work has to be prioritized and tracked. Work prioritization can be based on urgency and priority. Backlog of detections and security posture activities is desirable and recommended. 
+    <td class="tg-0lax">Detection engineering work has to be prioritized and tracked. Work prioritization can be based on urgency and priority. Backlog of detections and security posture activities is desirable and recommended.
 </td>
     <td class="tg-0pky">Prioritization criteria:
 
@@ -87,7 +91,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
     <td class="tg-0lax">Develop Research Questions</td>
     <td class="tg-0lax">Write your research questions that while answering you will gain understanding of the topic. </td>
     <td class="tg-0pky">Examples:
-    
+
   - Write down what you already know or don't know about the topic.
   - Use that information to develop questions. Use probing questions. (why? what if?).
   - Avoid "yes" and "no" questions </td>
@@ -100,6 +104,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
 
   - Identify important facts, dates, events, history, organizations, etc. (in case the detection is a response to a past incident.)
   - Find bibliographies which provide additional sources of information (include in the Appendix section detection document)
+
 </td>
   </tr>
 
@@ -110,7 +115,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
       <ul>
         <li> Start putting technical writeup by summarizing the most important information from technical aspect </li>
         <li> Research the technology associated with the technique to help understand the use cases, related data sources, and detection opportunities </li>
-        <li> Note: Defenders often create superficial detections because they lack an understanding of the technology involved. In case of uncertainties it is best to engage the team or engineer responsible for the management of the technology</li> 
+        <li> Note: Defenders often create superficial detections because they lack an understanding of the technology involved. In case of uncertainties it is best to engage the team or engineer responsible for the management of the technology</li>
       </ul>
 </td>
   </tr>
@@ -138,14 +143,14 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   </tr>
   <tr>
     <td class="tg-0lax">Improve(optional)</span></td>
-    <td class="tg-0lax">Once the data is explored we can identify opportunities for improvements such as: 
+    <td class="tg-0lax">Once the data is explored we can identify opportunities for improvements such as:
       <ul>
         <li>Collecting additional logs or change logging levels </li>
         <li>Create additional attributes (parsing of raw logs)</li>
         <li>Consolidation of distinct logs</li>
       </ul>
 </td>
-    <td class="tg-0lax">Improvement initiatives and requests should be communicated to the responsible for the dataset in question team. For that purpose it makes sense to maintain a contact list that provides quick reference to technology, support/engineering teams and contact details. 
+    <td class="tg-0lax">Improvement initiatives and requests should be communicated to the responsible for the dataset in question team. For that purpose it makes sense to maintain a contact list that provides quick reference to technology, support/engineering teams and contact details.
 </td>
   </tr>
   <tr>
@@ -157,7 +162,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   <tr>
     <td class="tg-0lax">Manual Testing</span></td>
     <td class="tg-0lax">Perform a manual testing and ensure the query works syntax and logical perspective</td>
-    <td class="tg-0lax">      
+    <td class="tg-0lax">
     <ul>
         <li>Ensure the query does not have any syntax errors</li>
         <li>In case the detection is build in response to past incident ensure that the query is indeed catching true positive events</li>
@@ -177,9 +182,9 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   </tr>
   <tr>
     <td class="tg-0lax">Unittest Development</span></td>
-    <td class="tg-0lax">The unittest development is dependent on the type of devops pipeline. Simple goals are provided. 
+    <td class="tg-0lax">The unittest development is dependent on the type of devops pipeline. Simple goals are provided.
         </td>
-    <td class="tg-0lax">Goals for the unittesting: 
+    <td class="tg-0lax">Goals for the unittesting:
           <ul>
             <li>Changes or missing data</li>
             <li>Syntax errors </li>
@@ -203,7 +208,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
           <li> Mitre minefield update</li>
         </ul>
         </td>
-    <td class="tg-0lax">        
+    <td class="tg-0lax">
     <ul>
           <li>Central knowledge base repository is required in order to mature the detection engineering program. This can be a github repository with controlled access that provides on a need to know basis the security teams members with access.</li>
           <li>Each hunt should have a corresponding <b>README.MD</b> file that provides sufficient information and context. Consider an SOC analyst or Incident Responder responding to an event from your detection. By looking at the documentation they should be easily briefed on the premise and technicalities of the detection. </li>
@@ -219,7 +224,7 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
     <td class="tg-0lax">True Positive validation</td>
     <td class="tg-0lax">Validate true positive event against real dataset using the query developed earlier. </td>
     <td class="tg-0lax">
-    True positive validation can be achieved by: 
+    True positive validation can be achieved by:
         <ul>
           <li>Using historical event that exists in the central data repository</li>
           <li>Emulation of the TTP by executing it in a controlled environment </li>
@@ -229,11 +234,11 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
   <tr>
     <td class="tg-0lax">False Positive Validation</td>
     <td class="tg-0lax">Ensure no FP are produced by the query when ran against the prod dataset. </td>
-    <td class="tg-0lax">        
+    <td class="tg-0lax">
       <ul>
           <li>False positive events are good known events which are produced as output results by the detection/hunt query. </li>
-          <li>If baseline is used it should be validated that the baseline is catching those good known events. 
-          Splunk example: 
+          <li>If baseline is used it should be validated that the baseline is catching those good known events.
+          Splunk example:
           Splunk you can use <b>makeresult</b> command to create fake results and test your baseline and how you handle false positives. </li>
       </ul>
     </td>
@@ -258,10 +263,9 @@ The Core comprises three lifecycle phases: Sunrise, Midday, Sunset: These phases
 </tbody>
 </table>
 
-
 <details><summary><h3>Sunrise phase Process Flow</h3></summary>
 
-```mermaid 
+```mermaid
 graph TD;
 Research1(Opportunity Identification) -->Research2(Prioritize);
 Research2 -->Research3(Develop Research Questions);
@@ -286,12 +290,13 @@ share -->share1(Update Sec Dependency Tree);
 
 </details>
 
-# 
+#
 
 ### Phase 2️⃣ Midday ☀️
+
 <p align="justify">
-The “Midday” phase is normally the longest phase from the detection lifecycle, during which the detection has been engineered and commissioned to production. The phase monitors the detection during its operation and aims to improve it if needed. 
-High level goals for the Midday phase: 
+The “Midday” phase is normally the longest phase from the detection lifecycle, during which the detection has been engineered and commissioned to production. The phase monitors the detection during its operation and aims to improve it if needed.
+High level goals for the Midday phase:
 </p>
 
 <ul>
@@ -348,7 +353,7 @@ High level goals for the Midday phase:
 
 <details><summary><h3>Midday phase Process Flow</h3></summary>
 
-```mermaid 
+```mermaid
 graph TD;
 Monitor1(Run per schedule) -->Monitor2(Receive alerts);
 Monitor2(Respond to alerts) --> Monitor3{False Positives?} ;
@@ -361,16 +366,17 @@ Improve --> Monitor1;
 
 </details>
 
-# 
+#
 
 ### Phase 3️⃣ Sunset 🌆
+
 <p align="justify">
-During the “Sunset” phase the detection is taken out of commission. The phase wants to ensure that resources are not spent for outdated detections that are no longer applicable and at the same time leave sufficient trace of the existence of the detection. 
+During the “Sunset” phase the detection is taken out of commission. The phase wants to ensure that resources are not spent for outdated detections that are no longer applicable and at the same time leave sufficient trace of the existence of the detection.
 </p>
 
-High level goals for the Sunset phase: 
+High level goals for the Sunset phase:
 <ul>
-  <li>Decommission the detection and leave it in a state that it can be resumed anytime 
+  <li>Decommission the detection and leave it in a state that it can be resumed anytime
   <li>Preserve knowledge
 </ul>
 
@@ -388,7 +394,7 @@ High level goals for the Sunset phase:
     <td rowspan="2">Decommission</td>
     <td>Decommission the detection</td>
     <td>The goal is to decommission the detection by following process that provides visibility </td>
-    <td>In order to decommission a detection simply change the status field to "Sunset" in the .yml file. Assuming your devops pipeline is configured correctly, this should effectively disable the detections and prevent it from running. 
+    <td>In order to decommission a detection simply change the status field to "Sunset" in the .yml file. Assuming your devops pipeline is configured correctly, this should effectively disable the detections and prevent it from running.
     <br>Note: Do not remove anything from the repository as detections can be reused in future. </td>
   </tr>
   <tr>
@@ -397,11 +403,11 @@ High level goals for the Sunset phase:
     <td>Update Mitre coverage map by removing the coverage that the detection was providing</td>
   </tr>
 </tbody>
-</table>                                                                           
+</table>
 
 <details><summary><h3>Sunset phase Process Flow</h3></summary>
 
-```mermaid 
+```mermaid
 graph TD;
 Review1[Review completed] --> Review2;
 Review2{detection ready to decom} -->|no| End[end];
@@ -421,79 +427,79 @@ Maturity is strictly a self-evaluation process by the team, the framework just p
 
 ![](screenshots/demm.png)
 
-### Level 1 - **Partial** 
+### Level 1 - **Partial**
 
-* Threat Detection Content 
-  * Organizational threat identification practices rely solely on external vendors to provide security content. 
-  * Assurance and context around alerts and detections is not provided or sufficient.
-  * Risk is managed in an ad hoc and often reactive manner by relying on third parties. 
-* Assurance 
-  * There is some limited awareness of cybersecurity threat detection capabilities at the organizational level. 
-  * The organization implements threat validation and verification on an irregular, case-by-case basis due to varied experience or information gained from outside sources. 
-  * Assurance through continuous validation is not present.
-* Knowledge sharing 
-  * The organization may not have processes to enable cybersecurity information sharing. 
-  * Documentation is rarely written and shared only on ad-hoc basis and it is scattered across teams. 
+- Threat Detection Content
+  - Organizational threat identification practices rely solely on external vendors to provide security content.
+  - Assurance and context around alerts and detections is not provided or sufficient.
+  - Risk is managed in an ad hoc and often reactive manner by relying on third parties.
+- Assurance
+  - There is some limited awareness of cybersecurity threat detection capabilities at the organizational level.
+  - The organization implements threat validation and verification on an irregular, case-by-case basis due to varied experience or information gained from outside sources.
+  - Assurance through continuous validation is not present.
+- Knowledge sharing
+  - The organization may not have processes to enable cybersecurity information sharing.
+  - Documentation is rarely written and shared only on ad-hoc basis and it is scattered across teams.
 
+### Level 2 - **Adequate**
 
-### Level 2 - **Adequate** 
-* Threat Detection Content 
-  * Organizational threat identification practices rely on internal teams and external vendors to provide security content. 
-  * Context around alerts and detections is provided. Specialized teams are able to introduce new detections and security content. 
-  * Some security teams have a better understanding of security posture than others.
-* Assurance 
-  * There is some awareness of cybersecurity threat detection capabilities as the organization is now building custom detections to compensate for gaps.
-  * The custom detections are use case driven and validated during the detection development process.
-  * Continuous validation is not enabled and the organization still relies on suppliers for most of the detection capabilities. 
-* Knowledge sharing 
-  * The organization is starting to enable knowledge sharing and promotes documentation efforts. 
-  * There is a central detection information repository. 
+* Threat Detection Content
+  - Organizational threat identification practices rely on internal teams and external vendors to provide security content.
+  - Context around alerts and detections is provided. Specialized teams are able to introduce new detections and security content.
+  - Some security teams have a better understanding of security posture than others.
+- Assurance
+  - There is some awareness of cybersecurity threat detection capabilities as the organization is now building custom detections to compensate for gaps.
+  - The custom detections are use case driven and validated during the detection development process.
+  - Continuous validation is not enabled and the organization still relies on suppliers for most of the detection capabilities.
+- Knowledge sharing
+  - The organization is starting to enable knowledge sharing and promotes documentation efforts.
+  - There is a central detection information repository.
 
 ### Level 3 - **Enabled (Proactive)**
-* Threat Detection Content 
-  * Organization maintains continuous practices that provide excellent internal insights and knowledge. Context around alerts and detections is provided.
-  * Any team is encouraged and capable to introduce new detection components and thus improve the security posture. 
-  * The security posture of the environment is well understood across the security teams. 
-* Assurance 
-  * The organization possesses a detection coverage map and covers a big percentage with in-house built detections. The organization does not rely on vendors to provide security content. 
-  * Automation is provided to continuously validate and run the detection use cases. 
-  * Additional assurance is achieved by running red team exercises and automation frameworks. 
-* Knowledge sharing 
-  * Organizations possess practices to create and maintain high quality records and appropriately control and manage the access to the information.
-  * Processes for socializing detections are automated and teams are informed of the development of new detections. 
 
-## Operational Maturity 
+* Threat Detection Content
+  - Organization maintains continuous practices that provide excellent internal insights and knowledge. Context around alerts and detections is provided.
+  - Any team is encouraged and capable to introduce new detection components and thus improve the security posture.
+  - The security posture of the environment is well understood across the security teams.
+- Assurance
+  - The organization possesses a detection coverage map and covers a big percentage with in-house built detections. The organization does not rely on vendors to provide security content.
+  - Automation is provided to continuously validate and run the detection use cases.
+  - Additional assurance is achieved by running red team exercises and automation frameworks.
+- Knowledge sharing
+  - Organizations possess practices to create and maintain high quality records and appropriately control and manage the access to the information.
+  - Processes for socializing detections are automated and teams are informed of the development of new detections.
+
+## Operational Maturity
+
 ### Maturity Review Process (MRP)
-The process of evaluating the maturity: 
+
+The process of evaluating the maturity:
 
 <ul>
-  <li><b>Collect</b> - Collect information about your processes,people and tools. Identify changes to any. The goal is to gain a holistic understanding of the organization's security teams, tools and processes. Based on that information various posture improvements can be identified. 
+  <li><b>Collect</b> - Collect information about your processes,people and tools. Identify changes to any. The goal is to gain a holistic understanding of the organization's security teams, tools and processes. Based on that information various posture improvements can be identified.
 </li>
-  <li><b>Analize</b> - Based on the data that you have collected and find the corresponding maturity level. Finding where in the maturity level the organization is important for understanding the impact and importance of each identified security improvement initiative and thus prioritize accordingly. 
+  <li><b>Analize</b> - Based on the data that you have collected and find the corresponding maturity level. Finding where in the maturity level the organization is important for understanding the impact and importance of each identified security improvement initiative and thus prioritize accordingly.
 </li>
-  <li><b>Prioritize</b> - Prioritize and decide which is the next low hanging fruit that can be improved. Not all security issues are equally important, prioritization should focus on those initiatives that influence and change the security posture and introduce the most maturity. 
+  <li><b>Prioritize</b> - Prioritize and decide which is the next low hanging fruit that can be improved. Not all security issues are equally important, prioritization should focus on those initiatives that influence and change the security posture and introduce the most maturity.
 </li>
   <li><b>Improve</b> - Create an initiative or a project for improving the identified gap. </li>
 </ul>
 
+### Security Improvement Initiative
 
-### Security Improvement Initiative 
 <p align="justify">
-Security improvement initiatives are likely outcomes of the MRP process. The goal of the security improvement initiative is to address identified visibility gaps in the organization's security posture. For example, during the review process or detection engineering we may identify that our application is not providing sufficient logging in order to detect particular behavior or ttp of interest. That is a good candidate for a security improvement initiative. The goal of the initiative would be to deliver the visibility needed and notify back the Detection Engineer so that they can proceed with the detection creation. Depending on the size of the organization and internal processes, this process might be driven by the Detection Engineer or completely separate team. 
+Security improvement initiatives are likely outcomes of the MRP process. The goal of the security improvement initiative is to address identified visibility gaps in the organization's security posture. For example, during the review process or detection engineering we may identify that our application is not providing sufficient logging in order to detect particular behavior or ttp of interest. That is a good candidate for a security improvement initiative. The goal of the initiative would be to deliver the visibility needed and notify back the Detection Engineer so that they can proceed with the detection creation. Depending on the size of the organization and internal processes, this process might be driven by the Detection Engineer or completely separate team.
 </p>
 
 ### DEMM Cadence
+
 <p align="justify">
-Evaluating the maturity of the organization and striving to improve it is no one time effort or activity. For that best results can be achieved by: 
+Evaluating the maturity of the organization and striving to improve it is no one time effort or activity. For that best results can be achieved by:
 </p>
   <li> Set a regular schedule for reevaluating and revisiting the DEMM. </li>
   <li> Ensure that the security improvement initiatives are targeted with a timeline and aligned with the overall organizational security strategy. </li>
 </ul>
 
-
-
-
-
-## Framework Mindmap 
+## Framework Mindmap
 
 ![](screenshots/mindmap.png)
