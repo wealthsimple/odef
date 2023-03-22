@@ -5,7 +5,7 @@ import pathlib
 class YmlHelper:
     """YmlHelper class: Helps to read and write yml files."""
     @staticmethod
-    def readYmlFile(file_path : pathlib.Path) -> None:
+    def read_yml_file(file_path : pathlib.Path) -> None:
         """Given file path as str it reads yml file."""
         with open(file_path, 'r') as infile:
             fruits_list = yaml.load(infile, Loader=yaml.FullLoader)
@@ -13,11 +13,10 @@ class YmlHelper:
         return fruits_list
 
     @staticmethod
-    def writeYmlFile(file_path : pathlib.Path, obj : dict) -> None:
-        """Given path as a str and dictionary object it writes to YML file format"""
-        with open(file_path, 'w') as outfile:
+    def write_yml_file(file_path: str, obj: dict) -> None:
+        with open(file_path, encoding="utf8", mode="w") as outfile:
             yaml.dump(obj, outfile, default_flow_style=False, sort_keys=False)
 
 if __name__ == "__main__":
-    path = pathlib.Path('DETECTIONS/DetectionExample/detection-example.yml')
-    print(YmlHelper.readYmlFile(path))
+    path = pathlib.Path('./DETECTIONS/YourSmartDetectionName/YourSmartDetectionName.yml')
+    print(YmlHelper.write_yml_file(path, {"test": "test"}))

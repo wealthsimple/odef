@@ -1,0 +1,49 @@
+name: Automated Detection Age Review
+
+on:
+  # schedule:
+  #   - cron:  00 09 * * 1
+  # push:
+  #    branches:
+  #      - main
+
+jobs:
+  detection_review:
+    runs-on: ubuntu-latest
+    outputs:
+      reveiwlist: ${{ steps.python_output.outputs.result }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+      - run: |
+          output=$(python ./helpers/detection_review_script_ga.py)
+          authors=$(echo "$output" | grep -oP "(?<=Authors: )[A-Za-z, ]+(?=;)" | tr -d '[:space:]')
+          detections=$(echo "$output" | grep -oP "(?<=Detections to review: )[A-Za-z0-9,\-_ ]+")
+          echo authors=$authors >> $GITHUB_ENV
+          echo detections=$detections >> $GITHUB_ENV
+        id: python_output
+      - name: Print reveiwlist
+        run: |
+          echo "$env.authors"
+          echo "$env.detections"
+
+      - name: Create detection review issue
+        if: env.detections != 'None'
+        uses: imjohnbo/issue-bot@v3
+        with:
+          assignees: ${{ env.authors }}
+          labels: "review"
+          title: "Review Detections"
+          body: |
+            ## Detections to review
+            ${{ env.detections }}
+            ## Authors 
+            ${{ env.authors }}
+          pinned: false
+          close-previous: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

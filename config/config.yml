@@ -1,4 +1,22 @@
 DetectionTemplates: ["alert_template.yml","alert_template.txt", "documentation_template.md"]
 HuntTemplates: []
 entry_question.choices: ["DETECTION","HUNT"]
-detection_author: ["your.email@exmaple.com"]
+# detection_author -> dict["user_email":"github_id"]
+detection_author: {"your.email@exmaple.com":"github_username"}
+tactic_to_folder: {'Reconnaissance':'1-Reconnaissance',
+                    'Resource Development':'2-Resource-Development',
+                    'Initial Access':'3-Initial-Access',
+                    'Execution':'4-Execution',
+                    'Persistence':'5-Persistence',
+                    'Privilege Escalation': '6-Privilege-Escalation',
+                    'Defense Evasion': '7-Defence-Evasion',
+                    'Credential Access':'8-Credential-Access',
+                    'Discovery':'9-Discovery',
+                    'Lateral Movement': '10-Lateral-Movement',
+                    'Collection':'11-Collection',
+                    'Command and Control':'12-Command-and-Control',
+                    'Exfiltration':'13-Exfiltrating',
+                    'Impact':'14-Impact'}
+max_detection_age: 365
+detections_folder: "DETECTIONS"
+hunt_folder: "HUNTS"

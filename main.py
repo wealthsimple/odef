@@ -27,10 +27,10 @@ def read_factory(detection_type:dict, type_object) -> ExporterFactory:
 
 def load_config(path:pathlib.Path) -> dict: 
     """Loads config file"""
-    config_obj = YmlHelper.readYmlFile(path)
+    config_obj = YmlHelper.read_yml_file(path)
     return config_obj
         
-def main(fac:ExporterFactory, conf:dict, ContentQuestioner) -> None: 
+def main(fac:ExporterFactory,custom_config: dict, ContentQuestioner) -> None: 
     """Main function."""
     
     # retrieve the exporters
@@ -51,13 +51,14 @@ def main(fac:ExporterFactory, conf:dict, ContentQuestioner) -> None:
 
     # prepare the export
     exporter.prepare_export(data, yml_template, md_temp)
-
+    sub_folder = pathlib.Path(content_name)
+    folder = pathlib.Path(custom_config.get("tactic_to_folder").get(data.get("tactic")) +"/"+sub_folder.name)
     #Create folder
-    folder = pathlib.Path(content_name)
+
     exporter.create_folder(folder)
 
     # do the export
-    exporter.do_export(folder)
+    exporter.do_export(str(folder))
 
     # write unittests
     # unittest_writer_yml = fac.get_unittest_yml_exporter()

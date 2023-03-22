@@ -36,9 +36,9 @@ class DetectionFileExporter(Exporter):
 
     def do_export(self, folder: pathlib.Path):
         print(f"Exporting DETECTION data to YML file to {folder}.")
-        path = os.path.join('DETECTIONS', folder.name, folder.name + '.yml')
-        YmlHelper.writeYmlFile(path, self.output_from_parsed_template)
-        md_path = os.path.join('DETECTIONS', folder.name, folder.name + '.md')
+        path = os.path.join('./','DETECTIONS', folder, folder.split("/")[1] + '.yml')
+        YmlHelper.write_yml_file(path, self.output_from_parsed_template)
+        md_path = os.path.join('./','DETECTIONS', folder, folder.split("/")[1] + '.md')
         FileHelper.writeTfFile(md_path, self.doc_output)
 
 class HuntFileExporter(Exporter):

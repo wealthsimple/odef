@@ -1,4 +1,6 @@
 status: "{{ status }}"
+created_date: "{{ created_date }}"
+last_updated_date: 
 name: "{{ detection_name }}"
 query: "{{ query }}"
 author: "{{ detection_author }}"
@@ -7,7 +9,7 @@ baseline: "{{ baseline }}"
 visualization: "{{ visualization }}"
 event_limit: 0
 data_source: "{{ data_source }}"
-data_location: splunk/elk/s3/datadog etc
+data_location: "{{ data_source }}"
 tactic: "{{ tactic }}"
 mitre_id: "{{ mitre_id }}"
 mitre_url: "{{ mitre_url }}"

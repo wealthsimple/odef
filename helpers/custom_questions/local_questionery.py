@@ -277,7 +277,7 @@ class ContentQuestions:
 
 
 if __name__ == "__main__":
-    conf = YmlHelper.readYmlFile('config/config.yml')
+    conf = YmlHelper.read_yml_file('config/config.yml')
     QuestionsObj = ContentQuestions(conf)
 
     answers = questionary.prompt(QuestionsObj.entry_question(), style=ContentQuestions.custom_style_fancy)
