@@ -12,8 +12,8 @@ This is a template repository, it can be forked and customized to the needs of y
 
 ## Goals
 
-1. The goal the repository is to become a central security content knowledge management base where the content is stored,organized,shared and interacted with.  
-2. The goal of the python application is to assists with the process of detection documentation and can be extended to run unittests quality checks and more.
+1. The goal of the repository is to become a central security content knowledge management base where the content is stored, organized, shared, and interacted with.  
+2. The goal of the python application is to assist with the process of detection documentation and can be extended to run unittests, quality checks, and more.
 3. The repository also hosts the open detection engineering framework which can be used as a reference to tailor and craft internal processes accordingly.
 
 ## Important links
