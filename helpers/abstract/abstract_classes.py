@@ -1,8 +1,7 @@
-import abc 
-from abc import abstractmethod
+from abc import abstractmethod, ABC
 import pathlib
 
-class Exporter(abc.ABC):
+class Exporter(ABC):
     """Basic representation of yml exporter."""
 
     @abstractmethod
@@ -18,13 +17,13 @@ class Exporter(abc.ABC):
         """Exports the data to a folder."""
 
 
-class DataCollector(abc.ABC):
+class DataCollector(ABC):
     """Basic representation of data collector object"""
     @abstractmethod
     def collector(self) -> dict:
         """Collects answers to the questions"""
 
-class UnittestsYmlExporter(abc.ABC):
+class UnittestsYmlExporter(ABC):
     """Basic representation of unittest exporter."""
 
     @abstractmethod
@@ -47,7 +46,7 @@ class UnittestsYmlExporter(abc.ABC):
         """Writes and replaces the old unittest with new one"""
 
 
-class ExporterFactory(abc.ABC):
+class ExporterFactory(ABC):
     """
     The factory doesn't maintain any of the instances it creates.
     """

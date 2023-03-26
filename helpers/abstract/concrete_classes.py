@@ -1,12 +1,13 @@
-import yaml 
+import yaml
 from enum import Enum
 import os
-import questionary 
+import questionary
+import pathlib
 from jinja2 import Template
 from helpers.yml_helpers import YmlHelper
 from helpers.file_helper import FileHelper
 from helpers.custom_questions.local_questionery import ContentQuestions
-from helpers.abstract.abstract_classes import *
+from helpers.abstract.abstract_classes import Exporter, ExporterFactory, DataCollector, UnittestsYmlExporter
 from helpers.custom_exceptions.custom_exceptions import DirExist
 
 
@@ -176,9 +177,11 @@ class HuntExporter(ExporterFactory):
         return UnittestsHuntYmlExporter()
 
 class ContentType(Enum):
+    """Enum for content type"""
     DETECTION =  DetectionExporter()
-    HUNT =  HuntExporter() 
+    HUNT =  HuntExporter()
 
 class TemplateType(Enum):
-    DETECTION = ["alert-template.yml", "documentation-template.md"]
-    HUNT = ["hunt-template.yml","documentation-template.md"]
+    """Enum for template type"""
+    DETECTION = {"yml_file":"alert-template.yml", "md_file":"documentation-template.md"}
+    HUNT = {"yml_file":"hunt-template.yml","md_file":"documentation-template.md"}

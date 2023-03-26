@@ -1,4 +1,5 @@
 import pathlib
+from typing import Dict, Any, Type
 import questionary
 import os, sys
 import yaml
@@ -17,20 +18,20 @@ from helpers.abstract.abstract_classes import *
 from helpers.abstract.concrete_classes import * 
 from helpers.custom_dataclasses.contentName import ContentName
 
-def read_factory(detection_type:dict, type_object) -> ExporterFactory:
+def read_factory(detection_type: Dict[str, Any], type_object: Type[Enum]) -> Type[ExporterFactory]:
     """Constructs an exporter factory based on the user's preference."""
 
-    for name in type_object: 
-        if name.name == detection_type.get('product').upper():
+    for name in type_object:
+        if name.name == detection_type.get("product", "").upper():
             return name.value
 
 
-def load_config(path:pathlib.Path) -> dict: 
+def load_config(path:pathlib.Path) -> dict:
     """Loads config file"""
     config_obj = YmlHelper.read_yml_file(path)
     return config_obj
         
-def main(fac:ExporterFactory,custom_config: dict, ContentQuestioner) -> None: 
+def main(fac:ExporterFactory, custom_config: dict) -> None:
     """Main function."""
     
     # retrieve the exporters
@@ -38,16 +39,18 @@ def main(fac:ExporterFactory,custom_config: dict, ContentQuestioner) -> None:
     exporter = fac.get_exporter()
 
     #collect data 
-    data = data_collector.collector(ContentQuestioner)
-
+    # data = data_collector.collector(ContentQuestioner) # TODO remove the line below and uncomment this one
+    data = {'detection_kind': 'endpoint', 'detection_name': 'YourSmartDetectionName', 'detection_author': '', 'description': '', 'query': 'index= ...', 'data_source': '', 'baseline': 'server!=server1000, ....1.1.1 ...', 'visualization': '| table ...', 'mitre_id': 'T1003.002', 'mitre_url': 'https://attack.mitre...TXXXX.XXX/', 'status': 'sunrise', 'tactic': 'Reconnaissance', 'schedule': '*/5 * * * *'}
     #prepare data
     content_name = ContentName(data.get("detection_name"))
     content_name = content_name.convert_case()
     data["detection_name"] = content_name
 
     #load templates
-    yml_template = FileHelper.load_template(file_name=read_factory(detection_type, TemplateType)[0])
-    md_temp = FileHelper.load_template(file_name=read_factory(detection_type, TemplateType)[1])
+    yml_file_name=read_factory(prompt_answer, TemplateType).get('yml_file')
+    md_temp_file_name = read_factory(prompt_answer, TemplateType).get('md_file')
+    yml_template = FileHelper.load_template(file_name=yml_file_name)
+    md_temp = FileHelper.load_template(file_name=md_temp_file_name)
 
     # prepare the export
     exporter.prepare_export(data, yml_template, md_temp)
@@ -91,12 +94,12 @@ if __name__ == "__main__":
     conf = load_config('config/config.yml')
     ContentQuestioner = ContentQuestions(conf)
     #collect detection type 
-    detection_type = questionary.prompt(ContentQuestioner.entry_question(),
+    prompt_answer = questionary.prompt(ContentQuestioner.entry_question(),
                                         style=ContentQuestioner.custom_style_fancy,
                                         )
 
     # create the factory
-    factory = read_factory(detection_type, ContentType)
+    factory = read_factory(prompt_answer, ContentType)
 
     # perform the exporting job
-    main(factory, conf, ContentQuestioner)
+    main(factory, conf)
