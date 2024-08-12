@@ -64,6 +64,15 @@ python main.py
 
 * Follow the process and once completed ensure that all files are present and your detection is well documented
 
+### The Docker method
+
+```
+docker build -t odef .
+docker run -it --rm -v $(pwd):/odef odef
+```
+
+The application will run in the container and your detections will be saved locally.
+
 ## How to contribute
 
 There are two ways to contribute to the repository and the community. Via discussions where you can raise topics of interest that will help the detection engineering community or by submitting issues or PRs to push your change to the repository.
