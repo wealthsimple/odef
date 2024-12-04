@@ -9,7 +9,7 @@ on:
 
 jobs:
   detection_review:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.DEFAULT_RUNS_ON }}
     outputs:
       reveiwlist: ${{ steps.python_output.outputs.result }}
     steps:
